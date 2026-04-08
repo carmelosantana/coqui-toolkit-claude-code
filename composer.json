@@ -1,0 +1,57 @@
+{
+    "name": "coquibot/coqui-toolkit-claude-code",
+    "description": "Claude Code CLI toolkit for Coqui — headless AI coding agent via the claude CLI",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carmelo Santana"
+        }
+    ],
+    "keywords": [
+        "php-agents",
+        "claude-code",
+        "ai-agent",
+        "coqui",
+        "toolkit"
+    ],
+    "require": {
+        "php": "^8.4"
+    },
+    "require-dev": {
+        "carmelosantana/php-agents": "^0.7",
+        "pestphp/pest": "^3.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoquiBot\\Toolkits\\ClaudeCode\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CoquiBot\\Toolkits\\ClaudeCode\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "analyse": "phpstan analyse"
+    },
+    "extra": {
+        "php-agents": {
+            "toolkits": [
+                "CoquiBot\\Toolkits\\ClaudeCode\\ClaudeCodeToolkit"
+            ],
+            "description": "Claude Code — headless AI coding agent sessions via the claude CLI"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
